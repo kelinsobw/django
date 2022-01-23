@@ -13,7 +13,8 @@
     <title>Резюме</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div id="darkue">
+<nav class="navbar navbar-expand-lg navbar-white bg-white">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Главная</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -32,14 +33,21 @@
                     </a>
                     <script>
 
+
                         document.addEventListener("DOMContentLoaded", setBg);
                     </script>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="dark_index.html">Сменить тему</a></li>
+                        <li><a class="dropdown-item" href="homework.html">Сменить тему</a></li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">О нас</a>
+                </li>
             </ul>
-
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
         </div>
     </div>
 
@@ -54,49 +62,29 @@
             <div class="wrap"><img src="image/img.jpg"/></div>
         </div>
         <div class="col">
-            <script>let formData = new FormData([]);</script>
-            <form id="formData">
-                <script type="text/javascript">
-                    var myData = {
-                        name: "Сергей",
-                        lastname: "Горелик",
-                        age: "26",
-                        info: "Информация о опыте работы, интересах и т.д.Информация о опыте работы, интересах и т.д.Информация о опыте работы, интересах и т.д." +
-                            "Информация о опыте работы, интересах и т.д.Информация о опыте работы, интересах и т.д.Информация о опыте работы, интересах и т.д."
-                    };
-                    var my_info = "Имя:  " + myData.name + ". <br><br>" +
-                        "Фамилия: " + myData.lastname + ". <br><br>" +
-                        "Возраст: " + myData.age + ". <br><br>" +
-                        "О себе: " + myData.info + ". <br><br>"
-                    document.write("<h4>" + my_info.bold() + "</h4>");
-
-                </script>
-                <input type="submit">
-            </form>
-
-            <script>
-                formData.onsubmit = async (e) => {
-                    e.preventDefault();
-                    let response = await fetch('/article/formdata/post/user', {
-                        method: 'POST',
-                        body: new FormData(formData)
-                    });
-
-                    let result = await response.json();
-
-                    alert(result.message);
+            <script type="text/javascript">
+                var myData = {
+                    name: "Сергей",
+                    lastname: "Горелик",
+                    age: "26",
+                    info: "Информация о опыте работы, интересах и т.д.Информация о опыте работы, интересах и т.д.Информация о опыте работы, интересах и т.д." +
+                        "Информация о опыте работы, интересах и т.д.Информация о опыте работы, интересах и т.д.Информация о опыте работы, интересах и т.д."
                 };
+                var my_info = "Имя:  " + myData.name + ". <br><br>" +
+                    "Фамилия: " + myData.lastname + ". <br><br>" +
+                    "Возраст: " + myData.age + ". <br><br>" +
+                    "О себе: " + myData.info + ". <br><br>"
+                document.write("<h4>" + my_info.bold() + "</h4>");
             </script>
         </div>
     </div>
-
-
-    <div id="footer">
+    <div id="footer2">
         &copy; Сергей Горелик
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+</div>
 </body>
 </html>
