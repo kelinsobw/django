@@ -1,0 +1,24 @@
+body {
+    font-family: cursive;
+    background: url(http://www.desktopas.com/files/2013/06/Images-1920x1200.jpg);
+}
+
+div.wrap img {
+    height: 380px;
+    width: 380px;
+    border-radius: 50%;
+    margin: auto;
+    margin: 10px;
+    padding: 10px;
+    border: 5px solid rgba(255, 255, 255, .5);
+}
+
+#footer {
+    position: fixed; /* Фиксированное положение */
+    left: 0;
+    bottom: 0; /* Левый нижний угол */
+    padding: 10px; /* Поля вокруг текста */
+    background: 	#808080; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+}
