@@ -80,7 +80,7 @@
                     e.preventDefault();
                     let response = await fetch('/article/formdata/post/user', {
                         method: 'POST',
-                        body: new FormData(formData)
+                        body: myData
                     });
 
                     let result = await response.json();

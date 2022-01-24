@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from blog.views import register
 from homework.views import homework_index, homework_index_post
 from posts.views import posts_index
 
@@ -24,4 +25,5 @@ urlpatterns = [
     path('', posts_index),
     path('homework_index/', homework_index),
     path('homework_index_post/', homework_index_post),
+    path('register/', register),
 ]
