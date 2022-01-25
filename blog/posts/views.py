@@ -1,14 +1,14 @@
 import logging
+
 from django.http import HttpResponse
+
+from posts.models import Post
 
 logger = logging.getLogger(__name__)
 
 
 def posts_index(request):
-   value = request.GET.get("key")
-   logger.info(value)
-   return HttpResponse("Posts index vieww")
-
-
-
+    author_name = request.GET.get("author", "manti")
+    posts = Post.objects.filter(author__username=author_name).order_by("-id")
+    return HttpResponse(posts)
 

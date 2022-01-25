@@ -1,4 +1,3 @@
-# forms.py
 from django import forms
 
 
@@ -10,3 +9,11 @@ class RegisterForm(forms.Form):
         min_length=8, widget=forms.PasswordInput()
     )
     age = forms.IntegerField(min_value=18, required=False)
+
+
+class PostsForm(forms.Form):
+    title = forms.CharField(max_length=200)
+    image = forms.ImageField(required=False)
+    slug = forms.CharField(max_length=200)
+    text = forms.CharField(max_length=10000)
+
