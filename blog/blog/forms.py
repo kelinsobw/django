@@ -15,5 +15,5 @@ class PostsForm(forms.Form):
     title = forms.CharField(max_length=200)
     image = forms.ImageField(required=False)
     slug = forms.CharField(max_length=200)
-    text = forms.CharField(max_length=10000)
+    text = forms.Textarea()
 

@@ -15,8 +15,7 @@ Including another URLconf
 """
 from django.conf import settings
 from django.contrib import admin
-from django.urls import path
-
+from django.urls import path, include
 
 from blog.views import register, posts
 from posts.views import posts_index
@@ -27,7 +26,10 @@ urlpatterns = [
     path('', posts_index),
     path('profiles/', profiles_index),
     path('register/', register),
-    path('posts/', posts)
+    path('posts/', posts),
+    path("api/", include(
+        "api.urls", namespace="api"
+    )),
 ]
 
 
