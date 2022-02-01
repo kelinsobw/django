@@ -37,11 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'crispy_forms',
     'crispy_bootstrap5',
-    "rest_framework",
     'blog',
     'posts',
+    'home'
 ]
 
 MIDDLEWARE = [
@@ -132,9 +133,9 @@ STATICFILES_FINDERS = [
    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
 
-STATICFILES_DIRS = []
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
-STATIC_ROOT = BASE_DIR / "static"
+STATIC_ROOT = "/home/kelinso/static"
 STATIC_URL = "/static/"
 
 MEDIA_ROOT = BASE_DIR / "media"
